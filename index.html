@@ -45,7 +45,7 @@
 
 <!-- optionboxclos -->
  </div>
-                
+            
                 <a href="">css</a>
                 <a href="">Javascript</a>
                
@@ -138,6 +138,95 @@
 <br><br>
 <h2 id="main">The two axes of flexbox</h2>
 
+<p>When working with flexbox you need to think in terms of two axes — the <a href="#main">main axis</a> and the cross axis. The main axis is defined by the flex-direction property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
+
+
+<br> <br> <br>
+<h3>The main axis</h3>
+<br>
+<p>The<a href="#mainaxis"></a> main axis</a> defined by flex-direction, which has four possible values:</p>
+
+<ul class="leftul">
+    <li>row</li>
+    <li>row-reverse</li>
+    <li>column</li>
+      <li>column-reverse</li>
+
+</ul>
+<br>
+<p>Should you choose row or row-reverse, your main axis will run along the row in the inline direction.</p>
+
+<img class="widthimg" src="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis/basics1.png" alt="">
+
+<br><br>
+<p>Choose column or column-reverse and your main axis will run in the block direction, from the top of the page to the bottom.</p>
+
+
+<img class="widthimg" src="./assits/images/mainaxisimg.jpg" alt="mainaxisimg">
+<br><br>
+<h3>The cross axis</h3>
+
+<p>The <a href="#crossaxies">cross axis</a> runs perpendicular to the main axis. Therefore, if your flex-direction (main axis) is set to row or row-reverse the cross axis runs down the columns.</p><br>
+<img class="widthimg" id="crossaxies" src="./assits/images/images.png" alt="">
+
+<br><br>
+<p>If your main axis is column or column-reverse then the cross axis runs along the rows.</p>
+<img class="widthimg" src="./assits/images/crossimg.png" alt="">
+
+<br><br>
+<h2>Start and end lines</h2>
+<br>
+<p>Another vital area of understanding is how flexbox makes no assumption about the writing mode of the document. Flexbox doesn't just assume that all lines of text start at the top left of a document and run towards the right-hand side, with new lines appearing one under the other. Rather, it supports all writing modes, like other <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values">logical properties and values.
+</a>
+
+
+<br><br>
+<p>You can read more about the relationship between flexbox and writing modes in a later article; however, the following description should help explain why we do not talk about left and right and top and bottom when we describe the direction that our flex items flow in.</p>
+
+<br> <br>
+<p>If the flex-direction is row and I am working in English, then the start edge of the main axis will be on the left, the end edge on the right.</p>
+
+</p>
+
+<img class="widthimg" src="./assits/images/mainaxisess.svg" alt="">
+
+<br>
+<p>If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on the left.</p>
+
+<br>
+<img class="widthimg" src="./assits/images/mainaxisimgright.svg" alt="">
+
+<br><br><br>
+<p>In both cases the start edge of the cross-axis is at the top of the flex container and the end edge at the bottom, as both languages have a horizontal writing mode.</p>
+<br> <br>
+<p>After a while, thinking about start and end rather than left and right becomes natural, and will be useful to you when dealing with other layout methods such as CSS Grid Layout which follow the same patterns.
+</p>
+<br><br>
+    <h2>The flex container</h2>
+    <br><br>
+    <p>An area of a document that is laid out using flexbox is called a flex container. To create a flex container, set the area's display property to flex. When we do this, the direct children of that container become flex items. You can explicitly control whether the container itself is displayed inline or in block formatting context using inline flex or inline-flex for inline flex containers or block flex or flex for block level flex containers.</p>
+
+<br><br>
+<h3>Initial values</h3>
+<br>
+As with all properties in CSS, some initial values are defined, so the contents of a new flex container will behave in the following way:
+<br><br>
+<ul class="leftul">
+    <li>Items display in a row (the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-direction">flex-direction</a> property's default value is row).</li>
+    <li>The items start from the start edge of the main axis.</li>
+    <li>The items do not stretch on the main dimension but can shrink (a flex-item's <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-grow">flex-grow</a> property's default value is 0 and its<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-shrink"> flex-shrink</a> property's default value is 1).</li>
+
+    <li>The items will stretch to fill the size of the cross-axis (the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items">align-items</a> property's default value is stretch).</li>
+    <li>The flex-item's <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis">flex-basis</a> property's default value is auto. This means that, in each case, it will be equal to the flex item <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/width">width</a> in horizontal writing mode, and the flex item <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/height">height</a> in vertical writing mode. If the corresponding width/height is also set to auto, the flex-basis content value is used instead.</li>
+    <li>All the items will be in a single row (the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap">flex-wrap</a> property's default value is nowrap), overflowing their container if their combined width/height exceeds the containing element width/height.</li>
+
+</ul>
+<br><br>
+<p>The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis. If there are more items than can fit in the container, they will not wrap but will instead overflow. If some items are taller than others, all items will stretch along the full length of the cross-axis.</p>
+
+
+
+
 
 <!-- parabox close -->
 </div>
@@ -184,6 +273,90 @@
 
     <!-- parent close -->
 </div>
+
+<!-- footer start ================================  -->
+
+<footer>
+
+<div class="footerparnt">
+
+<div class="footerchild1"><div class="logo"> <span class="mdnlogo">M</span>  &nbsp; mdn_</div>
+
+<p>your blueprint for a better internet</p>
+<br> <br> <br>
+<br> <br> <br>
+<div class="flexrowicon">
+    <i class="fa-brands fa-github icons"></i>
+    <i class="fa-brands fa-bluesky icons"></i>
+    <i class="fa-brands fa-square-x-twitter icons"></i>
+<i class="fa-brands fa-mastodon icons"></i>
+<i class="fa-solid fa-rss icons"></i>
+<i class="fa-solid fa-up-right-from-square icons"></i>
+
+</div>
+
+
+<!-- footer01end -->
+</div>
+<div class="footerchild2">
+
+<h4>MDN</h4>
+
+<a href="">About</a>
+<a href="">Blog</a>
+<a href=""></a>
+
+<a href="">Mozilla careers</a>
+<a href="">Advertise with</a>
+<a href="">Mdn plus</a>
+<a href="">Product helo <i class="fa-solid fa-up-right-from-square"></i></a>
+
+
+    <!-- footer2closec -->
+</div>
+<div class="footerchild3">
+
+<h4>Contribute</h4>
+<a href="">Mdn community</a>
+<a href="">Writing guidelines</a>
+<a href="">Mdn Discord <i class="fa-solid fa-up-right-from-square"></i></a>
+
+<a href="">Mdn on GITHUB <i class="fa-solid fa-up-right-from-square"></i></a>
+
+
+
+</div>
+<div class="footerchild2">
+<h4>MDN</h4>
+
+<a href="">About</a>
+<a href="">Blog</a>
+<a href=""></a>
+
+<a href="">Mozilla careers</a>
+<a href="">Advertise with</a>
+<a href="">Mdn plus</a>
+<a href="">Product helo <i class="fa-solid fa-up-right-from-square"></i></a>
+
+
+</div>
+
+
+
+<div class="hrcontentbox">
+    
+</div>
+
+
+    <!-- footerparentclosed -->
+</div>
+
+
+</footer>
+
+
+
+
 
 
 </body>

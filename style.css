@@ -38,7 +38,7 @@ header {
 .sigin {
     position: relative;
     left: -10px;
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 nav a {
@@ -135,7 +135,7 @@ nav {
     top: 0;
     overflow-y: auto;
     flex-shrink: 0;
-    background-color: #0B1120;
+     background-color: #131c34;
     color: white;
     padding: 25px 15px;
 }
@@ -255,7 +255,7 @@ nav {
 
 .childthree {
     height: 100%;
-    background-color: #0B1120;
+      background-color: #131c34;
     color: #282430;
     width: 260px;
     flex-shrink: 0;
@@ -367,10 +367,14 @@ footer{
 
 @media (max-width: 1000px) {
     .openbar {
-        height: 0;
+        height: auto;
+        top: 13px;
         position: fixed;
-        right: 0;
-        z-index: 999;
+        right: 0px;
+        z-index: 2000;
+    }
+     .navicon {
+        display: none;
     }
     
     .grybox {
@@ -384,16 +388,18 @@ footer{
         width: 0;
         overflow: hidden;
         top: 55px;
-        background-color: #7562A8;
         transition: width 0.5s ease-in-out;
     }
 
     .openbar:hover .childthree {
-        width: 130px;
+        width: 230px;
     }
 
     .openbtn {
         display: inline;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
     }
 }
 
@@ -404,6 +410,10 @@ footer{
     flex-direction: column;
     gap: 10px;
     }
+     .navicon {
+        display: none;
+    }
+
     .footerchild2{
         margin-left: 0;
     }
@@ -418,10 +428,6 @@ footer{
 }
 @media (max-width: 745px) {
     .navcol {
-        display: none;
-    }
-
-    .navicon {
         display: none;
     }
 

@@ -8,6 +8,16 @@
 
 /* HEADER CSS START ========================= */
 
+.navtwo {
+    width: 100%;
+    height: 40px;
+    background-color: #d5d5d5;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    z-index: 999;
+}
+
 header {
     background-color: #0B1120;
     padding: 7px;
@@ -352,15 +362,6 @@ footer{
 .footerchild3 a{
     color: white;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* MEDIA OPEN BAR AND CHILDTHREE START ========================= */

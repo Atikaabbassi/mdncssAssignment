@@ -8,15 +8,51 @@
 
 /* HEADER CSS START ========================= */
 
-.navtwo {
-    width: 100%;
+
+
+
+
+
+.navtwo{
+      width: 100%;
     height: 40px;
-    background-color: #d5d5d5;
+    background-color: #e1e1e1;
+
     position: fixed;
     top: 55px;
     left: 0;
     z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+
+    align-items: center;
 }
+
+.left,
+.right {
+    display: flex;
+    gap: 10px;
+}
+
+.navtwo i{
+    font-size: 0.8em;
+}
+
+.navtwo a{
+    text-decoration: none;
+      gap: 20px !important;
+      font-weight: bold;
+      color: rgb(1, 1, 1);
+    
+    
+}
+.navtwo a:hover{
+    text-decoration: underline;
+     gap: 20px !important;
+}
+
+
 
 header {
     background-color: #0B1120;
@@ -36,14 +72,19 @@ header {
 }
 
 .searchicon {
-    height: 30px;
-    width: 99px;
+    height: 33px;
+    width: 140px;
     border: none;
-    border-radius: 20px;
-    background-color: #fbfafc;
+    border-radius: 15px;
+    background-color: #fbfafcf6;
     position: relative;
     left: -18px;
 }
+
+/* .searchicon:hover{
+background-color: #fbfafc;
+} */
+
 
 .sigin {
     position: relative;
@@ -392,9 +433,11 @@ footer{
         transition: width 0.5s ease-in-out;
     }
 
+
     .openbar:hover .childthree {
         width: 230px;
     }
+
 
     .openbtn {
         display: inline;
@@ -404,6 +447,17 @@ footer{
     }
 }
 
+@media (max-width: 950px){
+    .navtwo{
+        display: none;
+    }
+    .navicon {
+        display: none;
+    }
+
+}
+
+
 @media (max-width: 865px) {
 
     .flexrowicon{
@@ -411,10 +465,7 @@ footer{
     flex-direction: column;
     gap: 10px;
     }
-     .navicon {
-        display: none;
-    }
-
+     
     .footerchild2{
         margin-left: 0;
     }
@@ -427,10 +478,8 @@ footer{
    
 }
 }
-@media (max-width: 745px) {
-    .navcol {
-        display: none;
-    }
+@media (max-width: 890px) {
+   
 
     .openbtn {
         display: none;
@@ -440,6 +489,9 @@ footer{
         display: none;
     }
 
+    .navcol{
+        display: none;
+    }
     .headermain {
         justify-content: center;
         position: relative;

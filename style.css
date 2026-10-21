@@ -10,8 +10,11 @@
 
 
 
-
-
+.menuicon {
+    display: none;
+    position: fixed;
+    right: 0;
+}
 
 .navtwo{
       width: 100%;
@@ -81,11 +84,6 @@ header {
     left: -18px;
 }
 
-/* .searchicon:hover{
-background-color: #fbfafc;
-} */
-
-
 .sigin {
     position: relative;
     left: -10px;
@@ -133,32 +131,52 @@ nav {
 .parabox h3 {
     font-family: "Archivo Black", sans-serif;
 }
-
 .grybox {
-    width: 600px;
-    height: 200px;
+    width: 900px;
+    height: 250px;
     background-color: #131b29;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 999;
     display: flex;
-    flex-grow: 1;
+   
     opacity: 0;
     visibility: hidden;
     transition: 0.5s ease-in-out;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.graychild1 {
-    width: 33%;
+.linebox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
 }
 
-.graychild2 {
-    width: 33%;
+.linediv {
+    width: 100%;
+    height: 30px;
+    padding: 6px 0;
+  display: flex;
+  align-items: flex-start;
+    background-color: white;
+    color: #0B1120;
 }
 
-.graychild3 {
+
+
+.graychild1,.graychild2,.graychild3 {
+    display: flex;
+    flex-direction: column;
     width: 35%;
+    box-sizing: border-box;
+    margin-top: 1.7em;
+    align-items: flex-start;
+    margin-left: 1em;
+    flex: 1;
+    min-width: 0;
 }
 
 .optionbox:hover .grybox {
@@ -311,7 +329,7 @@ nav {
     width: 260px;
     flex-shrink: 0;
     position: relative;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 /* OPEN BUTTON CSS START ========================= */
@@ -454,6 +472,13 @@ footer{
     .navicon {
         display: none;
     }
+    .footerparnt{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
+    }
 
 }
 
@@ -462,8 +487,9 @@ footer{
 
     .flexrowicon{
         display: flex;
-    flex-direction: column;
-    gap: 10px;
+  gap: 15px;
+ 
+   
     }
      
     .footerchild2{
@@ -472,11 +498,8 @@ footer{
      .footerchild3{
         margin-left: 0;
     }
-.footerparnt{
-    display: flex;
-    flex-direction: column;
-   
-}
+  
+
 }
 @media (max-width: 890px) {
    
@@ -489,9 +512,9 @@ footer{
         display: none;
     }
 
-    .navcol{
+    /* .navcol{
         display: none;
-    }
+    } */
     .headermain {
         justify-content: center;
         position: relative;
@@ -501,12 +524,55 @@ footer{
         margin: 0 auto;
         text-align: center;
     }
+
+
+
+
+     .navcol {
+        display: none;
+    }
+
+    .menuicon {
+        display: block;
+        background: transparent;
+        color: rgb(249, 246, 246);
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .headermain:hover .navcol {
+        display: flex;
+        flex-direction: column;
+
+    }
 }
 
 @media (max-width: 688px) {
     .childone {
         display: none;
     }
+    .footerparnt{
+    display: flex;
+    flex-direction: column;
+   
 }
+}
+
+
+
+
+
+
+
+@media (max-width: 890px) {
+   
+}
+
+
+
+
 
 /* MEDIA END ========================= */

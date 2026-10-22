@@ -8,8 +8,6 @@
 
 /* HEADER CSS START ========================= */
 
-
-
 .menuicon {
     display: none;
     position: fixed;
@@ -38,10 +36,9 @@
     gap: 10px;
 }
 
-.navtwo i{
-    font-size: 0.8em;
+.moonin{
+    font-size: 0.9em;
 }
-
 .navtwo a{
     text-decoration: none;
       gap: 20px !important;
@@ -132,28 +129,35 @@ nav {
     font-family: "Archivo Black", sans-serif;
 }
 .grybox {
-    width: 900px;
+    width: 800px;
     height: 250px;
     background-color: #131b29;
     position: absolute;
+    
     top: 100%;
     left: 0;
     z-index: 999;
     display: flex;
-   
     opacity: 0;
     visibility: hidden;
     transition: 0.5s ease-in-out;
-    padding: 10px;
-    box-sizing: border-box;
+    padding: 10;
+    
+}
+
+.linebr{
+    border-left: 1px solid white;
+    height: 150px;
+    position: absolute;
+
 }
 
 .linebox {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    
 }
+
 
 .linediv {
     width: 100%;
@@ -167,16 +171,27 @@ nav {
 
 
 
-.graychild1,.graychild2,.graychild3 {
+.graychild1{
     display: flex;
     flex-direction: column;
     width: 35%;
     box-sizing: border-box;
-    margin-top: 1.7em;
+    margin-top: 1.4em;
     align-items: flex-start;
-    margin-left: 1em;
+    margin-left: 1.8em;
     flex: 1;
     min-width: 0;
+   
+   
+    padding-bottom: 30px;
+
+}
+.hrf{
+    color: gray;
+}
+.graychild1 a{
+    font-size: 0.9em;
+  
 }
 
 .optionbox:hover .grybox {
@@ -196,7 +211,6 @@ nav {
 }
 
 /* CHILD ONE CSS START ========================= */
-
 .childone {
     width: 250px;
     height: 100%;
@@ -217,6 +231,8 @@ nav {
     margin-bottom: 25px;
 }
 
+
+
 .inputbox button {
     width: 200px;
     height: 42px;
@@ -228,19 +244,15 @@ nav {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .inputbox button i {
     margin-right: 10px;
 }
-
 .inputbox button:hover {
     background-color: #131c34;
 }
-
 .inputbox h2 {
     font-size: 18px;
 }
-
 .ref {
     font-size: 14px;
     text-transform: uppercase;
@@ -249,7 +261,6 @@ nav {
     border-bottom: 2px solid #D1C5F5;
     padding-bottom: 8px;
 }
-
 .sidenav {
     display: flex;
     flex-direction: column;
@@ -266,15 +277,12 @@ nav {
     border-radius: 8px;
     transition: 0.3s ease;
 }
-
 .sidenav a:hover {
     background-color: #131c34;
     padding-left: 22px;
     color: #FFFFFF;
 }
-
 /* CHILD ONE CSS END ========================= */
-
 /* CHILD TWO WHITE CONTENT CSS START ========================= */
 
 .childtwo {
@@ -297,7 +305,6 @@ nav {
     font-weight: 400;
     font-style: normal;
 }
-
 .leftul {
     margin-left: 25px;
     margin-top: 22px;
@@ -318,9 +325,10 @@ nav {
     padding-left: 1em;
 }
 
-/* CHILD TWO CSS END ========================= */
+/* CHILD TWO CSS END ========================= =================*/
 
-/* CHILD THREE RIGHT ARTICLE BOX START ========================= */
+
+/* CHILD THREE RIGHT ARTICLE BOX START ============= ============ */
 
 .childthree {
     height: 100%;
@@ -420,6 +428,29 @@ footer{
 
 .footerchild3 a{
     color: white;
+}
+
+
+
+.bottmfooter{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.bottmfooter a{
+   text-decoration: none;
+   color: white;
+   
+    
+}
+.mlogo{
+    font-size: 1.5em;
+}
+
+.whitehr{
+    
+    border: 1px solid gray;
 }
 
 

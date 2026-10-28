@@ -369,7 +369,7 @@ nav {
 
 footer{
     background-color: #131c34;
-    width: 100%;
+    max-width: 100%;
     min-height:100% ;
 }
 .footerparnt{

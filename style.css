@@ -435,6 +435,7 @@ footer{
 .bottmfooter{
     display: flex;
     justify-content: flex-start;
+     flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -454,7 +455,7 @@ footer{
 }
 
 
-/* MEDIA OPEN BAR AND CHILDTHREE START ========================= */
+/* MEDIA OPEN BAR AND CHILDTHREE START ========================= ======================== */
 
 @media (max-width: 1000px) {
     .openbar {
@@ -550,13 +551,12 @@ footer{
         justify-content: center;
         position: relative;
     }
+   
 
     .mdnlogo {
         margin: 0 auto;
         text-align: center;
     }
-
-
 
 
      .navcol {
@@ -590,17 +590,16 @@ footer{
     flex-direction: column;
    
 }
+ .bottmfooter{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 3em;
+        gap: 10px;
+    }
+    
 }
 
-
-
-
-
-
-
-@media (max-width: 890px) {
-   
-}
 
 
 
